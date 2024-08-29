@@ -1,0 +1,161 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    border: 1px solid #191414;
+    box-shadow: 10px 10px #1ed760;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    width: 500px;
+    height: 300px;
+    border:3px solid black;
+  }
+
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color:#1ed760;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #191414;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    /* position: fixed; */
+    /* height:50px; */
+  }
+
+.modal-choices
+{
+    margin-top: 7px;
+}
+
+.modal-choices #createPlaylistChoice
+{
+  color:#1ed760;
+}
+
+.modal-choices button
+{
+    cursor: pointer;
+    font-size: 13px;
+    margin:8px;
+    background: none;
+    border: none;
+    color:white;
+    /* margin-top: 130px; */
+}
+  
+.toggle-create-playlist
+{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* -ms-transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
+}
+
+/* .modal-input
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+} */
+
+.toggle-create-playlist input
+{
+    border-radius: 10px;
+    height: 25px;
+    width:300px;
+    padding:5px;
+    border: 2px solid #191414;
+}
+
+.toggle-create-playlist button
+{
+    text-align: center;
+    padding: 5px;
+    color: #191414; 
+    border: 2px solid #191414;
+    background-color: white;
+    transition: 500ms;
+    font-weight: 700;
+}
+  
+.toggle-create-playlist button:hover
+{
+    background-color: #191414;
+    cursor: pointer;
+    transition: 500ms;
+    color:#1ed760;
+}
+
+.modal-body
+{
+  height:250px;
+/* overflow: hidden; */
+  overflow-y: scroll;
+}
+
+.playlist-option
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.playlist-option p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    /* float: left; */
+}
+
+.playlist-option button
+{
+  /* float: right; */
+    background-color: #84f597;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    /* height: 25px; */
+    margin: 15px;
+}
+#toggle-add-to-playlist
+{
+  width:90%;
+  display: none;
+  /* position: absolute; */
+  right:0;
+  margin:20px;
+  /* overflow: hidden; */
+}

@@ -1,0 +1,48 @@
+body
+{
+    background-color: #eeebe3;
+}
+
+.card
+{
+    /* margin-left:20%; */
+    text-align: center;
+    position: absolute;
+    top: 10%; 
+    left: 25%; 
+}
+
+.card p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo
+{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 150px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card a
+{
+    border: 3px solid black;
+    border-radius: 10px;
+    padding:10px;
+    font-weight: 700;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transition: 800ms;
+}
+
+.card a:hover
+{
+    color:white;
+    background-color: black;
+    transition: 800ms;
+}

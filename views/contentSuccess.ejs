@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/content.css">
+    <link rel="stylesheet" href="/css/contentSuccess.css">
+    <link rel="stylesheet" href="/css/musicPlayer.css">
+    <link rel="stylesheet" href="/css/playlistModal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+    <script defer src="/js/tracksSelection.js"></script>
+    <script defer src="/js/musicPlayer.js"></script>
+    <script defer src="/js/playlistModal.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Playlist</title>
+</head>
+<body>
+    <%- include("layouts/contentTemplate") %>
+    <%- include("layouts/playlistModal") %>
+    
+    <div class="create-playlist">
+        <form>
+            <input type="checkbox" id="checkAll" onclick="checkAllFunc(this)">
+            <!-- <span class="checkMark"></span> -->
+            <label id="checkAllLabel">select all</label><br>
+        </form>
+        <button id="openCreatePlaylistModal">Create playlist</button>
+    </div>
+    <% let count = 0 %>
+    <% recommendedPlaylist.forEach(songs => { %>
+        <div class="reccomendation-card">
+            <img class="album-image" src=<%=songs.album.images[0].url %>>
+            <div class="description-card">
+                <p class="card-song-name"><%= songs.name %></p>
+                <form>
+                    <label><input class="songCheckBox" type="checkbox" value= <%= songs.id %> onclick="checkAllStatus(this)">
+                     select song</label><br>
+                </form>
+                <p class="card-song-artist"><% for( let index = 0; index < songs.artists.length; index++ ) { %>
+                    <%= songs.artists[index].name + " "%>
+                    <% if (index < (songs.artists.length - 1)) { %>
+                        &
+                    <% } %>
+                <% } %>
+                </p>
+                <p class="card-song-album">in <%= songs.album.name %> </p>
+                <% if(songs.preview_url != undefined){ %>
+                <button class="songPlayButton" id=<%=count%> value=<%= songs.preview_url %> class="songPlayButton">
+                    play
+                </button>
+                <% } else { %>
+                    <p>audio unavailable</p>
+                 <% } %>
+            </div>
+        </div>
+        <% count += 1 %>
+    <% }) %>
+    <%- include("layouts/musicPlayer") %>
+</body>
+</html>

@@ -1,0 +1,107 @@
+.create-playlist
+{
+    display: flex;
+    justify-content:space-evenly
+}
+
+.reccomendation-card
+{
+    width:800px;
+    margin:auto;
+    border:3px solid #191414;
+    padding:15px;
+    /* position:relative; */
+    display: flex;
+    margin-top: 20px;
+}
+
+.reccomendation-card img
+{
+    width:120px; 
+    float:left;
+    /* position: absolute; */
+}
+
+.description-card .card-song-name
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    margin:5px
+}
+
+.description-card p
+{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 3px;
+    font-size: 13px;
+}
+
+.description-card
+{
+    margin:5px;
+    margin-left: 15px; 
+}
+
+.description-card form label
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    /* margin-top: -5px; */
+    /* display: block;  */
+}
+
+.songPlayButton
+{
+    background-color: #a3f7ba;
+    border: 1px solid #47ed75;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+
+.description-card audio
+{
+    margin: 10px;
+    bottom:0px;
+    height:25px;
+    width:600px;
+    border-radius: 0px;
+}
+
+
+#openCreatePlaylistModal
+{
+    background-color: #a3f7ba;
+    color: black; 
+    padding: 5px 15px; 
+    font-size: 13px; 
+    border: 2px solid black;
+    border-radius: 10px; 
+    font-weight:500;
+}
+
+#openCreatePlaylistModal:hover
+{
+    background-color: #84f597;
+}
+
+#checkAllLabel
+{
+    font-size: 15px; 
+    margin-top: -20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* .playlist-option p
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.playlist-option button
+{
+    background-color: #84f597;
+    border: #47ed75;
+    padding: 10px;
+    border-radius: 5px;
+    height: 25px;
+} */

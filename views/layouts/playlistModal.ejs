@@ -1,0 +1,33 @@
+<!-- create playlist modal -->
+<div id="createPlaylistModal" class="modal">
+    <div class="modal-content" id="modal-content">
+      <div class="modal-header">
+        <div class="modal-choices">
+            <button id="createPlaylistChoice">Create Playlist</button>
+            <button id="add-to-playlist">Add to Playlist</button>
+        </div>
+        <span class="close">&times;</span> 
+      </div>
+      <div class="modal-body" id="modal-body">
+        <div class="toggle-create-playlist" id="toggle-create-playlist">
+            <input type="text" name="playlistName" id="playlistName" placeholder="input your playlist name">
+            <br>
+            <br>
+            <input type="text" name="playlistDescription" id="playlistDescription" placeholder="input your playlist description">
+            <br>
+            <br>
+            <button id="createPlaylist" type="submit">create playlist</button>
+        </div>
+        <div class="toggle-add-to-playlist" id="toggle-add-to-playlist">
+          <% let count = 0 %>
+          <% existingPlaylistList.forEach(playlist => { %>
+            <div class="playlist-option">
+              <p><%= playlist.playlistName %></p>
+              <button class="select-playlist-option" id= <%=count %> value= <%= playlist.playlistID%>>select playlist</button>
+            </div>
+            <% count += 1 %>
+          <% }) %>
+        </div>
+      </div>
+    </div>      
+</div>
